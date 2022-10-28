@@ -48,7 +48,7 @@ body {
     text-align: left;
 }
 
-.btn {
+.btn-custom {
     border-radius: 25px;
     background: linear-gradient(90deg, #BB52FE, #9447F1);
     color: #FFFFFF;
