@@ -1,22 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="../images/icono-logo.ico" />
-    <title>DashBoard</title>
-    <link rel="stylesheet" href="../assets/css/css-site/Dashboard.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="shortcut icon" type="image/x-icon" href="../assets/images/icono-logo.ico" />
+<title>DashBoard</title>
+<link rel="stylesheet" href="../assets/css/css-site/Dashboard.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 </head>
+
 <body>
-    
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="d-flex">
+    <div class="bg-custom siderbar-container active">
+      <div class="menu">
+        <div class="toggle">
+          <i class="open bi bi-list"></i>
+
+          <i class="close bi bi-box-arrow-in-left"></i>
+        </div>
+        <!-- <a href="#" class="d-block p-3 text-light"><i class="bi bi-speedometer2 mr-2 lead"></i> <span>Tablero</span></a>
+        <a href="#" class="d-block p-3 text-light"><i class="bi bi-people-fill mr-2 lead"></i> Usuarios</a>
+        <a href="#" class="d-block p-3 text-light"><i class="bi bi-bar-chart-fill mr-2 lead"></i> Estadisticas</a>
+        <a href="#" class="d-block p-3 text-light"><i class="bi bi-person-circle mr-2 lead"></i> Perfil</a>
+        <a href="#" class="d-block p-3 text-light"><i class="bi bi-gear mr-2 lead"></i> Configuración</a> -->
+        <ul>
+          <li class="list">
+            <a href="#">
+              <span class="icon"><i class="bi bi-house-door"></i></span>
+              <span class="title">Home</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon"><i class="bi bi-person"></i></span>
+              <span class="title">Profile</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon"><i class="bi bi-chat-left-dots"></i></span>
+              <span class="title">Messages</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon"><i class="bi bi-gear"></i></span>
+              <span class="title">Settings</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon"><i class="bi bi-question-lg"></i></span>
+              <span class="title">Help</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <span class="icon"><i class="bi bi-key"></i></span>
+              <span class="title">Password</span>
+            </a>
+          </li>
+          <li class="list">
+            <div style="display: flex; align-items: center;"> 
+              <a href="#">
+                <span class="icon"><i class="bi bi-key"></i></span>
+                <span class="title">Password</span>
+              </a>
+              <i class="bi bi-caret-down" style="margin-left: 5px;"></i>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+    <div >
+      <a href="#">
+        <span class="icon"><i class="bi bi-key"></i></span>
+        <span class="title">Password</span>
+      </a>
+      <i class="bi bi-caret-down"></i>
+    </div>
+
+
+  </div>
+
+
+
+
+  <!-- 
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#">
+          <span class="icon"><i class="bi bi-house-door"></i></span>
+          <span class="title">Home</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="bi bi-person"></i></span>
+          <span class="title">Profile</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="bi bi-chat-left-dots"></i></span>
+          <span class="title">Messages</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="bi bi-gear"></i></span>
+          <span class="title">Settings</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="bi bi-question-lg"></i></span>
+          <span class="title">Help</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><i class="bi bi-key"></i></span>
+          <span class="title">Password</span>
+        </a>
+      </li>
+
+      <li class="list">
+        <a href="">
+          <span class="icon"><i class="bi bi-box-arrow-in-left"></i></span>
+          <span class="title">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="toggle">
+    <i class="open bi bi-list"></i>
+    <i class="close bi bi-x-lg"></i>
+  </div> -->
+
+
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-2">
+          <h6>Benefits</h6>
+          <ul class="footer-links">
+            <li><a href="#">No Monthly Fees</a></li>
+            <li><a href="#">Get Paid Early</a></li>
+            <li><a href="#">Free-free Overdraft</a></li>
+            <li><a href="#">Build Credit</a></li>
+            <li><a href="#">60,000+ Free-Free ATMs</a></li>
+            <li><a href="#">High Yield Savings Account</a></li>
+            <li><a href="#">Send And Recieve Money</a></li>
+            <li><a href="#">Security and Control</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <h6>Company</h6>
+          <ul class="footer-links">
+            <li><a href="#">Abouts Us</a></li>
+            <li><a href="#">Dimension, Inc.</a></li>
+            <li><a href="#">In the News</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Segurity Programs</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <h6>Resources</h6>
+          <ul class="footer-links">
+            <li><a href="#">Policies</a></li>
+            <li><a href="#">Chime U.S Privacy Policy</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Second Chance Banking</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Supporting Those With Disabilities</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <h6>Contact Us</h6>
+          <ul class="footer-links">
+            <li> <a href="tel:844-244-6363s">844-244-6363</a> </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-4">
+          <div class="row">
+            <div class="col-md-12 img-center-apply">
+              <a href="#"> <img src="../assets/images/home-page-img/logo-footer.png" alt="logo">
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 img-center-apply">
+              <a href="">
+                <img src="../assets/images/home-page-img/icons/google-play.svg" alt="" width="150">
+              </a>
+              </a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 img-center-apply">
+              <a href="">
+                <img src="../assets/images/home-page-img/icons/app-store.svg" alt="" width="150">
+              </a>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12 img-center-apply">
+              <a href="">
+                <img src="../assets/images/home-page-img/icons/app-gallery.svg" alt="" width="150">
+              </a>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 col-md-3"></div>
+            <div class="col-2 col-md-2 img-center-apply">
+              <a href="">
+                <img src="../assets/images/home-page-img/icons/facebook.png" alt="facebook" width="32">
+              </a>
+            </div>
+            <div class="col-2 col-md-2 img-center-apply">
+              <a href="">
+                <img src="../assets/images/home-page-img/icons/twitter.png" alt="twitter" width="32">
+              </a>
+            </div>
+
+            <div class="col-2 col-md-2 img-center-apply">
+              <a href="">
+                <img src="../assets/images/home-page-img/icons/instagram.png" alt="instagram" width="32">
+              </a>
+            </div>
+            <div class="col-2 col-md-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Site footer -->
+
+
+
+  <script>
+
+    let menuToggle = document.querySelector('.toggle');
+    // let navigation = document.querySelector('.navigation')
+    let siderbar_container = document.querySelector('.siderbar-container')
+    menuToggle.onclick = function () {
+      menuToggle.classList.toggle('active')
+      // navigation.classList.toggle('active')
+      siderbar_container.classList.toggle('active')
+    }
+
+
+    // add active class in selecte list item
+    let list = document.querySelectorAll('.list');
+    for (let i = 0; i < list.length; i++) {
+      list[i].onclick = function () {
+        let j = 0;
+        while (j < list.length) {
+          list[j++].className = 'list';
+        }
+        list[i].className = 'list active'
+      }
+    }
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
+
+
 </body>
+
 </html>
