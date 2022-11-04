@@ -1,5 +1,37 @@
-html,body{
+html,
+body {
     font-family: 'Roboto', sans-serif;
+}
+
+
+.img-animation {
+    animation-name: example;
+    position: relative;
+    animation: myfirst 4s linear 2s infinite;
+}
+
+@keyframes myfirst {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+    
+        top: 40px;
+    }
+
+    50% {
+    
+        bottom: 80px;
+    }
+
+    75% {
+        top: 40px;
+    }
+
+    100% {
+        top: 0px;
+    }
 }
 
 .btn-custom {
@@ -28,9 +60,9 @@ html,body{
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
-} 
+}
 
-.img-bg-iphone{
+.img-bg-iphone {
     background-image: url('../../images/index/effects-iphone.png');
     background-repeat: no-repeat;
     background-attachment: inherit;
@@ -47,7 +79,7 @@ html,body{
     text-align: left;
 }
 
-.title-degrade{
+.title-degrade {
     background: linear-gradient(90.33deg, #BE53FF -6.94%, #B24FFB 2.79%, #1B23C7 126.54%, rgba(225, 164, 251, 0) 126.55%, #1B23C7 126.55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
