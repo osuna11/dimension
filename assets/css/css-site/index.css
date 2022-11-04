@@ -1,29 +1,54 @@
-.img-prueba{
-    background-image: linear-gradient(35deg, rgba(190, 83, 255, 0.6),
-    rgba(27, 35, 199, 0.6), rgba(190, 83, 255, 0.6)),
-url('/assets/images/home-page-img/woman-entering-the-world-of-the-metaverse-with-vr-2022-04-20-02-07-31-utc\ 1.png');
+html,body{
+    font-family: 'Roboto', sans-serif;
 }
 
+.btn-custom {
+    border-radius: 25px;
+    background: linear-gradient(89.78deg, #BE53FF -24.05%, #1B23C7 181.81%);
+    color: #FFFFFF;
+    border: #007bb6;
+    font-size: 16px;
+    height: auto;
+    font-weight: 400;
+    padding: 10px 30px;
+}
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
     background-image: url('../../images/index/arrow-left-circle.svg');
 }
 
-.carousel-control-next-icon{
+.carousel-control-next-icon {
     background-image: url('../../images/index/arrow-right-circle.svg');
 }
 
 
-.img-bg{
+.img-bg {
     background-image: url('../../images/index/effects.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+} 
+
+.img-bg-iphone{
+    background-image: url('../../images/index/effects-iphone.png');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
 }
 
-.title-starter{
+.title-starter {
     background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: left;
+}
+
+.title-degrade{
+    background: linear-gradient(90.33deg, #BE53FF -6.94%, #B24FFB 2.79%, #1B23C7 126.54%, rgba(225, 164, 251, 0) 126.55%, #1B23C7 126.55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
@@ -53,7 +78,9 @@ url('/assets/images/home-page-img/woman-entering-the-world-of-the-metaverse-with
     margin-bottom: 150px;
     margin-top: 75px;
 } */
-
+/* .bg-notifications-elemtes{
+    height: 100px;
+} */
 
 .bg-cards {
     background-color: rgba(255, 255, 255, 0.5);
