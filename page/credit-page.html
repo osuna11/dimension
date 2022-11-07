@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="images/icono-logo.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/images/icono-logo.ico" />
   <title>Credit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/css-site/credit-page-style.css">
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="../assets/css/bootstrap-css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
@@ -16,46 +18,113 @@
 <body>
 
   <!--Barra de navegación-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #fff;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+        <a class="navbar-brand" href="../index.html"><img src="../assets/images/home-page-img/logo-navbar.svg"
+                alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Other page
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="page/log-in.html">log- in</a></li>
+                        <li><a class="dropdown-item" href="page/credit-page.html">Credits page</a></li>
+                        <li><a class="dropdown-item" href="page/Dashboard.html">DashBoard</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="page/wireless-payment.html">wireles payment</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Fees
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Balance
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page/credit-page.html">Credit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="page/Dashboard.html">Dashboard</a>
+                </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/images/home-page-img/img-user-perfil.png" alt="">
+                                Alan Najera
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <div class="row" style="margin: auto;">
+                            <div class="col-6"> <a href="" class="nav-buttons m-1"> <img
+                                        src="../assets/images/home-page-img/chat-icon.png" alt="chat"></a>
+                            </div>
+                            <div class="col-6">
+                                <a href="" class="nav-buttons m-1"><img
+                                        src="../assets/images/home-page-img/worldwide-svgrepo-com 1.png"
+                                        alt="worl"></a>
+                            </div>
+                        </div>
+
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+        </form> -->
+
+
+        </div>
     </div>
-  </nav>
+</nav>
+
   
   <main role="main" class="container">
     <div class="starter-template">
