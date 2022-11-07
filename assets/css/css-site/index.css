@@ -4,35 +4,6 @@ body {
     box-sizing: border-box;
 }
 
-.img-animation {
-    animation-name: example;
-    position: relative;
-    animation: myfirst 4s linear 2s infinite;
-}
-
-@keyframes myfirst {
-    0% {
-        top: 0px;
-    }
-
-    25% {
-
-        top: 40px;
-    }
-
-    50% {
-
-        bottom: 80px;
-    }
-
-    75% {
-        top: 40px;
-    }
-
-    100% {
-        top: 0px;
-    }
-}
 
 .btn-custom {
     border-radius: 25px;
@@ -90,20 +61,12 @@ body {
 
 .p-info {
     width: auto;
-    max-width: 550px;
+    max-width: 500px;
 }
-
+    
 /*bg-gray start*/
 
-.bg-gray {
-    background-color: #F3F3F3;
-    margin-bottom: 100px;
-    display: inline-block;
-    width: 100%;
-    z-index: -1;
-    position: absolute;
-    height: 550px;
-}
+
 
 .starter-template {
     padding: 0 1.5rem;
@@ -134,10 +97,6 @@ body {
     min-height: 120px;
     text-align: justify;
     line-height: 11px;
-}
-
-.height-row {
-    height: 90px;
 }
 
 .notifications-img {
@@ -272,7 +231,8 @@ body {
 }
 
 .footer-links a {
-    color: #737373
+    color: #737373;
+    text-decoration: none;
 }
 
 .footer-links a:active,
@@ -304,6 +264,7 @@ body {
     margin: 0
 }
 
+
 @media (max-width:991px) {
     .site-footer [class^=col-] {
         margin-bottom: 10px
@@ -316,7 +277,6 @@ body {
 }
 
 /*Fin de footer*/
-
 
 @media (min-width: 300px) {
     .title-degrade {
@@ -336,6 +296,19 @@ body {
     .btn-custom {
         text-align: center;
     }
+
+    .height-row {
+        height: auto;
+        margin: 10px 0px;
+    }
+
+    .title-banner {
+        text-align: center;
+    }
+
+    .div-Credits {
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) {
@@ -352,21 +325,46 @@ body {
     .div-info {
         text-align: center;
     }
+
+    .height-row {
+        height: 90px;
+    }
+
+    .title-banner {
+        text-align: center;
+    }
+
+    .div-Credits {
+        text-align: center;
+    }
 }
 
 @media (min-width: 1200px) {
     .title-degrade {
-        font-size: 3rem;
+        font-size: 3.5rem;
         text-align: left;
     }
 
     .p-info {
         font-size: 1rem;
         text-align: justify;
+        line-height: initial;
     }
 
 
     .div-info {
+        text-align: left;
+    }
+
+    .height-row {
+        height: 90px;
+    }
+
+    .title-banner {
+        text-align: right;
+    }
+
+    .div-Credits {
         text-align: left;
     }
 }
@@ -379,7 +377,7 @@ body {
     }
 
     .p-info {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-align: justify;
     }
 
@@ -387,4 +385,22 @@ body {
     .div-info {
         text-align: left;
     }
+
+    .height-row {
+        height: 90px;
+    }
+
+    .title-banner {
+        text-align: right;
+    }
+
+    .div-Credits {
+        text-align: left;
+    }
 }
+
+
+
+/*animation section*/
+
+/*------------------------------*/
