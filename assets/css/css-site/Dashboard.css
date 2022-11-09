@@ -11,7 +11,6 @@
 }
 
 body {
-    overflow: hidden;
     font-weight: 300;
     color: #111B54 !important;
 }
@@ -24,17 +23,33 @@ a:hover {
 /*el nav-bar*/
 .nav-buttons {
     margin: auto 10px;
-    
+
     border: rgba(0, 0, 0, 0);
 }
 
 /*fin del nav-bar*/
 
 
-.navbar-nav ul li:active{
+.navbar-nav ul li:active {
     background: #fff;
 }
 
+.dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 0.25rem;
+}
 
 
 .bg-custom {
@@ -48,7 +63,7 @@ a:hover {
     overflow-x: hidden;
 }
 
-.siderbar-container.active{
+.siderbar-container.active {
     width: 70px;
 }
 
@@ -61,19 +76,19 @@ a:hover {
     /* padding-top: 40px; */
 }
 
-.siderbar-container ul li{
+.siderbar-container ul li {
     position: relative;
     list-style: none;
     width: 100%;
-    border-top-left-radius: 20px;    
-    border-bottom-left-radius: 20px;  
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
-.siderbar-container ul li.active{
+.siderbar-container ul li.active {
     background: #fff;
 }
 
-.siderbar-container ul li a{
+.siderbar-container ul li a {
     position: relative;
     display: block;
     width: auto;
@@ -82,11 +97,11 @@ a:hover {
     color: #fff;
 }
 
-.siderbar-container ul li.active a{
+.siderbar-container ul li.active a {
     color: #333;
 }
 
-.siderbar-container ul li a .icon{
+.siderbar-container ul li a .icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -96,11 +111,11 @@ a:hover {
 }
 
 
-.siderbar-container ul li a .icon i{
+.siderbar-container ul li a .icon i {
     font-size: 1.5em;
 }
 
-.siderbar-container ul li a .title{
+.siderbar-container ul li a .title {
     position: relative;
     display: block;
     padding-left: 10px;
@@ -196,9 +211,8 @@ a:hover {
 } */
 /* fin de barra lateral */
 
-.toggle
-{
- position: relative;
+.toggle {
+    position: relative;
 
     /* width: 50px; */
     height: 50px;
@@ -222,12 +236,12 @@ a:hover {
 }
 
 .toggle i.open,
-.toggle.active i.close{
+.toggle.active i.close {
     display: block;
 }
 
 .toggle i.close,
-.toggle.active i.open{
+.toggle.active i.open {
     display: none;
 }
 
@@ -242,6 +256,8 @@ a:hover {
     font-size: 15px;
     line-height: 24px;
     color: #737373;
+    position: relative;
+    z-index: 1;
 }
 
 .site-footer hr {
@@ -325,4 +341,302 @@ a:hover {
 .img-center-apply {
     margin: 5px 0px;
     text-align: center;
+}
+
+
+.text-title {
+    color: #000;
+    font-weight: 600;
+    margin: 0;
+}
+
+.text-sec {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+
+.text-table{
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-table-td{
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+.icon-degrade{
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.8rem;
+}
+
+.banner-btn{
+    border-radius: 25px;
+    color: #000000;
+    border:#000000;
+    font-size: 0.8rem;
+    height: auto;
+    font-weight: 400;
+    padding: 4px 15px;
+    background-color: #ffffff;
+}
+
+
+/*tabs*/
+
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #fff;
+    color: #000;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #4A31D7;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: #000;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+#Completed {
+    background-color: rgb(247, 247, 247);
+}
+
+
+.btn-custom {
+    border-radius: 25px;
+    background: linear-gradient(89.78deg, #BE53FF -24.05%, #1B23C7 181.81%);
+    color: #FFFFFF;
+    border: #007bb6;
+    font-size: 16px;
+    height: auto;
+    font-weight: 400;
+    padding: 10px 30px;
+}
+
+
+.text-degrade {
+    background: linear-gradient(90.33deg, #BE53FF -6.94%, #B24FFB 2.79%, #1B23C7 126.54%, rgba(225, 164, 251, 0) 126.55%, #1B23C7 126.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*-----------------------------------------*/
+body {
+    font-size: .875rem;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+/*
+   * Sidebar
+   */
+
+.sidebar {
+    /* position: fixed; */
+    top: 0;
+    /* rtl:raw:
+    right: 0;
+    */
+    bottom: 0;
+    /* rtl:remove */
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    /* padding: 48px 0 0; */
+    /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #727272;
+}
+
+.sidebar .nav-link.active {
+    color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+/*
+   * Navbar
+   */
+
+/* .navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+} */
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+
+
+.bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+.nav-flush .nav-link {
+    border-radius: 0;
+}
+
+.btn-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .65);
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+.btn-toggle:active{
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+}
+
+
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.scrollarea {
+    overflow-y: auto;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.lh-tight {
+    line-height: 1.25;
 }
