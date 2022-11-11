@@ -1,0 +1,21 @@
+.carousel-caption {
+    padding-bottom: 80px !important;
+}
+
+.inputs-change {
+    background: #F3F3F3;
+    /* box-shadow: 0px 10px 10px #eeee !important; */
+    border: rgba(255, 255, 255, 0);
+    padding: 0.375rem 0.75rem;
+}
+
+.btn-custom {
+    border-radius: 25px;
+    background: linear-gradient(89.78deg, #BE53FF -24.05%, #1B23C7 181.81%);
+    color: #FFFFFF !important;
+    border: #007bb6;
+    font-size: 16px;
+    height: auto;
+    font-weight: 400;
+    padding: 10px 30px;
+}

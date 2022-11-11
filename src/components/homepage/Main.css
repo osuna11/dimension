@@ -1,0 +1,73 @@
+.img-bg-iphone {
+    background-image: url('../../assets/images/index/effects-iphone.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+    margin: 80px 0px;
+}
+
+.title-degrade {
+    background: linear-gradient(90.33deg, #BE53FF -6.94%, #B24FFB 2.79%, #1B23C7 126.54%, rgba(225, 164, 251, 0) 126.55%, #1B23C7 126.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+
+.img-bg {
+    /* background-image: url('../../assets/images/index/effects-iphone.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover; */
+    background-color: #eee;
+}
+
+.img-bg-card{
+    background-image: url('../../assets/images/index/effects.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+@media (min-width: 300px) {
+    .title-degrade {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .btn-custom {
+        text-align: center;
+    }
+
+    .height-row {
+        height: auto;
+        margin: 10px 0px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .title-degrade {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title-degrade {
+        font-size: 3.5rem;
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .title-degrade {
+        font-size: 5rem;
+        text-align: left;
+    }
+}
