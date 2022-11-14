@@ -1,0 +1,208 @@
+.text-sec {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.text-table {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-table-td {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+.icon-degrade {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 0.8rem;
+}
+
+.banner-btn {
+    border-radius: 25px;
+    color: #000000;
+    border: #000000;
+    font-size: 0.8rem;
+    height: auto;
+    font-weight: 400;
+    padding: 4px 15px;
+    background-color: #ffffff;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #fff;
+    color: #000;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #4A31D7;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: #000;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+
+
+
+.btn-custom {
+    border-radius: 25px;
+    background: linear-gradient(89.78deg, #BE53FF -24.05%, #1B23C7 181.81%);
+    color: #FFFFFF;
+    border: #007bb6;
+    font-size: 16px;
+    height: auto;
+    font-weight: 400;
+    padding: 10px 30px;
+}
+
+
+.text-degrade {
+    background: linear-gradient(90.33deg, #BE53FF -6.94%, #B24FFB 2.79%, #1B23C7 126.54%, rgba(225, 164, 251, 0) 126.55%, #1B23C7 126.55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.bi {
+    vertical-align: -.125em;
+    pointer-events: none;
+    fill: currentColor;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+.nav-flush .nav-link {
+    border-radius: 0;
+}
+
+.btn-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .65);
+    background-color: transparent;
+    border: 0;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+.btn-toggle:active {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: normal;
+}
+
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+}
+
+
+.btn-toggle[aria-expanded="true"] {
+    color: rgba(0, 0, 0, .85);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+    display: inline-flex;
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+    background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.scrollarea {
+    overflow-y: auto;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.lh-tight {
+    line-height: 1.25;
+}
+
+#sidebarMenu{
+    background-color: #eee !important;
+}
+
+
+@media (min-width: 576px) {
+    .btn-sidebarMenu{
+        display: block !important;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .btn-sidebarMenu{
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .btn-sidebarMenu{
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .btn-sidebarMenu{
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .btn-sidebarMenu{
+        display: none !important;
+    }
+}

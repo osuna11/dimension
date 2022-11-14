@@ -4,12 +4,12 @@ import images from "../../images";
 function Footer() {
     return (
         <div>
-            <footer class="site-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-6 col-md-2 col-6">
+            <footer className="site-footer">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-6 col-md-2 col-6">
                             <h6>Benefits</h6>
-                            <ul class="footer-links">
+                            <ul className="footer-links">
                                 <li><a href="/#">No Monthly Fees</a></li>
                                 <li><a href="/#">Get Paid Early</a></li>
                                 <li><a href="/#">Free-free Overdraft</a></li>
@@ -20,9 +20,9 @@ function Footer() {
                                 <li><a href="/#">Security and Control</a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-6 col-md-2 col-6">
+                        <div className="col-xs-6 col-md-2 col-6">
                             <h6>Company</h6>
-                            <ul class="footer-links">
+                            <ul className="footer-links">
                                 <li><a href="/#">Abouts Us</a></li>
                                 <li><a href="/#">Dimension, Inc.</a></li>
                                 <li><a href="/#">In the News</a></li>
@@ -31,9 +31,9 @@ function Footer() {
                                 <li><a href="/#">Segurity Programs</a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-6 col-md-2 col-6">
+                        <div className="col-xs-6 col-md-2 col-6">
                             <h6>Resources</h6>
-                            <ul class="footer-links">
+                            <ul className="footer-links">
                                 <li><a href="/#">Policies</a></li>
                                 <li><a href="/#">Chime U.S Privacy Policy</a></li>
                                 <li><a href="/#">Help Center</a></li>
@@ -42,22 +42,22 @@ function Footer() {
                                 <li><a href="/#">Supporting Those With Disabilities</a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-6 col-md-2 col-6">
+                        <div className="col-xs-6 col-md-2 col-6">
                             <h6>Contact Us</h6>
-                            <ul class="footer-links">
+                            <ul className="footer-links">
                                 <li> <a href="tel:844-244-6363s">844-244-6363</a> </li>
                             </ul>
                         </div>
-                        <div class="col-xs-6 col-md-4">
-                            <div class="row">
-                                <div class="col-md-12 img-center-apply">
+                        <div className="col-xs-6 col-md-4">
+                            <div className="row">
+                                <div className="col-md-12 img-center-apply">
                                     <a href="/#"> <img src={images.logoFooter} alt="logo" />
                                     </a>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12 img-center-apply">
+                            <div className="row">
+                                <div className="col-md-12 img-center-apply">
                                     <a href="/#">
                                         <img src={images.logoGooglePlay} alt="" width="150" />
                                     </a>
@@ -65,8 +65,8 @@ function Footer() {
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12 img-center-apply">
+                            <div className="row">
+                                <div className="col-md-12 img-center-apply">
                                     <a href="/#">
                                         <img src={images.logoAppStore} alt="" width="150" />
                                     </a>
@@ -74,33 +74,33 @@ function Footer() {
                             </div>
 
 
-                            <div class="row">
-                                <div class="col-md-12 img-center-apply">
+                            <div className="row">
+                                <div className="col-md-12 img-center-apply">
                                     <a href="/#">
                                         <img src={images.logoAppGallery} alt="" width="150" />
                                     </a>
 
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-3 col-md-3"></div>
-                                <div class="col-2 col-md-2 img-center-apply">
+                            <div className="row">
+                                <div className="col-3 col-md-3"></div>
+                                <div className="col-2 col-md-2 img-center-apply">
                                     <a href="/#">
                                         <img src={images.logoFacebook} alt="facebook" width="32" />
                                     </a>
                                 </div>
-                                <div class="col-2 col-md-2 img-center-apply">
+                                <div className="col-2 col-md-2 img-center-apply">
                                     <a href="/#">
                                         <img src={images.logoTwitter} alt="twitter" width="32" />
                                     </a>
                                 </div>
 
-                                <div class="col-2 col-md-2 img-center-apply">
+                                <div className="col-2 col-md-2 img-center-apply">
                                     <a href="/#">
                                         <img src={images.LogoInstagram} alt="instagram" width="32" />
                                     </a>
                                 </div>
-                                <div class="col-2 col-md-3"></div>
+                                <div className="col-2 col-md-3"></div>
                             </div>
                         </div>
                     </div>

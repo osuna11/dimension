@@ -14,8 +14,10 @@ import carterabitcoin from './assets/images/home-page-img/icons/cartera-bitcoin.
 import bitcoin from './assets/images/home-page-img/icons/bitcoin.png'
 import manosbitcoin from './assets/images/home-page-img/icons/manos-bitcoin.png'
 import credtsCards from './assets/images/index/credts cards.png'
+import logoParaLogin from './assets/images/log-ing-img/logo-para-login 1.svg'
+import fotoDePerfil from './assets/images/wireless-payment/foto-de-perfil.png'
 
-
+// eslint-disable-next-line
 export default {
     "img1": banner,
     "logonavbar": logonavbar,
@@ -33,4 +35,6 @@ export default {
     "bitcoin": bitcoin,
     "manosbitcoin" : manosbitcoin,
     "credtsCards": credtsCards,
+    "logoParaLogin" : logoParaLogin,
+    "fotoDePerfil": fotoDePerfil
 }

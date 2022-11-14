@@ -90,7 +90,7 @@ function Mian() {
                                             </h3>
                                         </div>
                                         <label className="toggle">
-                                            <input className="toggle-checkbox" type="checkbox" checked />
+                                            <input className="toggle-checkbox" type="checkbox" defaultChecked />
                                             <div className="toggle-switch"></div>
                                             <span className="toggle-label"></span>
                                         </label>
@@ -112,7 +112,7 @@ function Mian() {
                                             </h3>
                                         </div>
                                         <label className="toggle">
-                                            <input className="toggle-checkbox" type="checkbox" checked />
+                                            <input className="toggle-checkbox" type="checkbox" defaultChecked />
                                             <div className="toggle-switch"></div>
                                             <span className="toggle-label"></span>
                                         </label>

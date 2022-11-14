@@ -15,7 +15,7 @@ function Carousel(props) {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={props.img1} class="d-block w-100" alt="..." />
+                        <img src={props.img1} className="d-block w-100" alt="..." />
                         <div className="carousel-caption">
                             <div className="row">
                                 <div className="col-12 col-md-12">
@@ -23,7 +23,7 @@ function Carousel(props) {
                                 </div>
                                 <div className="col-12 col-md-12 form-group">
                                     <input type="email" className="inputs-change rounded-pill form-control" id="inputEmail"
-                                        placeholder="Email address" required autofocus />
+                                        placeholder="Email address" required autoFocus />
                                     {/* <label for="inputEmail">Email</label> */}
                                     <button className="btn btn-custom m-2">Apply Now</button>
                                 </div>
@@ -41,7 +41,7 @@ function Carousel(props) {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={props.img2} class="d-block w-100" alt="..." />
+                        <img src={props.img2} className="d-block w-100" alt="..." />
                         <div className="carousel-caption">
                             <div className="row">
                                 <div className="col-12 col-md-12">
@@ -49,7 +49,7 @@ function Carousel(props) {
                                 </div>
                                 <div className="col-12 col-md-12 form-group">
                                     <input type="email" className="inputs-change rounded-pill form-control" id="inputEmail"
-                                        placeholder="Email address" required autofocus />
+                                        placeholder="Email address" required autoFocus />
                                     {/* <label for="inputEmail">Email</label> */}
                                     <button className="btn btn-primary m-2">Apply Now</button>
                                 </div>
@@ -67,7 +67,7 @@ function Carousel(props) {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={props.img3} class="d-block w-100" alt="..." />
+                        <img src={props.img3} className="d-block w-100" alt="..." />
                         <div className="carousel-caption">
                             <div className="row">
                                 <div className="col-12 col-md-12">
@@ -75,7 +75,7 @@ function Carousel(props) {
                                 </div>
                                 <div className="col-12 col-md-12 form-group">
                                     <input type="email" className="inputs-change rounded-pill form-control" id="inputEmail"
-                                        placeholder="Email address" required autofocus />
+                                        placeholder="Email address" required autoFocus />
                                     {/* <label for="inputEmail">Email</label> */}
                                     <button className="btn btn-primary m-2">Apply Now</button>
                                 </div>
