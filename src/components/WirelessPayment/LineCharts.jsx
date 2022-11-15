@@ -44,28 +44,28 @@ export const data = {
     labels,
     datasets: [
         {
-            labels: "React",
-            data: [32, 42, 51, 60, 51, 95],
+            label: "bitcoin",
+            data: [12, 12, 13, 14, 15, 16],
             backgroundColor: "#2196f3",
             borderColor: "#2196f3",
         },
         {
-            labels: "React",
-            data: [32, 42, 51, 60, 51, 95],
-            backgroundColor: "#2196f3",
-            borderColor: "#2196f3",
+            label: "etheroun",
+            data: [15, 14, 13, 12, 11, 10],
+            backgroundColor: "#FF2D00",
+            borderColor: "#FF2D00",
         },
         {
-            labels: "React",
-            data: [32, 42, 51, 60, 51, 95],
-            backgroundColor: "#2196f3",
-            borderColor: "#2196f3",
+            label: "DogCoin",
+            data: [1, 2, 3, 4, 5, 6],
+            backgroundColor: "#78FF00",
+            borderColor: "#78FF00",
         },
         {
-            labels: "React",
-            data: [32, 42, 51, 60, 51, 95],
-            backgroundColor: "#2196f3",
-            borderColor: "#2196f3",
+            label: "DollarCoin",
+            data: [7 , 8, 9 ,10, 11, 12],
+            backgroundColor: "#00F3FF",
+            borderColor: "#00F3FF",
         }
     ]
 }
