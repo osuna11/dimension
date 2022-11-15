@@ -1,0 +1,23 @@
+.bg-exchage {
+    /* background-color: blue !important; */
+    background-image: url('../../assets/images/Exchange/bg-exchange.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+}
+
+.bg-white{
+    /* background-color: #fff; */
+}
+
+
+.nav-tabs{
+    margin: 3rem 0rem;
+}
+
+.tab-exchange{
+    background-color: #eee;
+    width: auto;
+    display: block;
+}
