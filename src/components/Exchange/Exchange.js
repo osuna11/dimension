@@ -8,39 +8,147 @@ function Exchange() {
     return (
         <div className="bg-exchage">
             <Navbar />
-            <div className="nav-tabs">
-                <ul className="nav nav-tabs" id="myTab" role="tablist">
+            <div className="nav-tabs-div">
+                <ul className="nav nav-tabs nav-tabs-ul" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                        <button className="nav-link button active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                        <button className="nav-link button" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
                     </li>
                     <li className="nav-item" role="presentation">
-                        <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                        <button className="nav-link button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
                     </li>
                 </ul>
                 <div className="tab-content" id="myTabContent">
                     <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <h1>Exchange</h1>
+                        <span className="header-section">
+                            <button className="btn-color"><i className="bi bi-sliders"></i></button>
+                            <h1>Exchange</h1>
+                            <button className="btn-color"><i className="bi bi-box-arrow-up"></i></button>
+                        </span>
+                        <div>
+                        <span className="tab-exchange flex-container">
+                                <div>
+                                    <img src={images.cryptocurrency1} alt="CrytoMonena" />
+                                </div>
+                                <div>
+                                    <select name="select">
+                                        <option value="value1">Value 1</option>
+                                        <option value="value2" selected>Value 2</option>
+                                        <option value="value3">Value 3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span>
+                                        <p>-1.9737</p>
+                                        <p>1.2302223</p>
+                                    </span>
+                                </div>
+                            </span>
+                            <button className="exchange-btn"><i className="bi bi-arrow-down-up"></i></button>
+                            <span className="tab-exchange flex-container">
+                                <div>
+                                    <img src={images.cryptocurrency1} alt="CrytoMonena" />
+                                </div>
+                                <div>
+                                    <select name="select">
+                                        <option value="value1">Value 1</option>
+                                        <option value="value2" selected>Value 2</option>
+                                        <option value="value3">Value 3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span>
+                                        <p>-1.9737</p>
+                                        <p>1.2302223</p>
+                                    </span>
+                                </div>
+                            </span>
+                            <span className="btn-span">
+                                <button className="btn-withdrown">Swap Now</button>
+                                <button className="btn-transfer">Save transfer</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <span className="header-section">
+                            <button className="btn-color"><i className="bi bi-sliders"></i></button>
+                            <h1>Exchange</h1>
+                            <button className="btn-color"><i className="bi bi-box-arrow-up"></i></button>
+                        </span>
                         <div>
                             <span className="tab-exchange">
-                            <img src={images.cryptocurrency1} alt="CrytoMonena"/>
+                                <img src={images.cryptocurrency1} alt="CrytoMonena" />
                                 <select name="select">
                                     <option value="value1">Value 1</option>
                                     <option value="value2" selected>Value 2</option>
                                     <option value="value3">Value 3</option>
                                 </select>
-                            <span>
-                                <p>-1.9737</p>
-                                <p>1.2302223</p>
+                                <span>
+                                    <p>-1.9737</p>
+                                    <p>1.2302223</p>
+                                </span>
                             </span>
+                            <button className="exchange-btn"><i className="bi bi-arrow-down-up"></i></button>
+                            <span className="tab-exchange">
+                                <img src={images.cryptocurrency1} alt="CrytoMonena" />
+                                <select name="select">
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2" selected>Value 2</option>
+                                    <option value="value3">Value 3</option>
+                                </select>
+                                <span>
+                                    <p>-1.9737</p>
+                                    <p>1.2302223</p>
+                                </span>
+                            </span>
+                            <span className="btn-span">
+                                <button className="btn-withdrown">Swap Now</button>
+                                <button className="btn-transfer">Save transfer</button>
                             </span>
                         </div>
                     </div>
-                    <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-                    <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                    <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <span className="header-section">
+                            <button className="btn-color"><i className="bi bi-sliders"></i></button>
+                            <h1>Exchange</h1>
+                            <button className="btn-color"><i className="bi bi-box-arrow-up"></i></button>
+                        </span>
+                        <div>
+                            <span className="tab-exchange">
+                                <img src={images.cryptocurrency1} alt="CrytoMonena" />
+                                <select name="select">
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2" selected>Value 2</option>
+                                    <option value="value3">Value 3</option>
+                                </select>
+                                <span>
+                                    <p>-1.9737</p>
+                                    <p>1.2302223</p>
+                                </span>
+                            </span>
+                            <button className="exchange-btn"><i className="bi bi-arrow-down-up"></i></button>
+                            <span className="tab-exchange">
+                                <img src={images.cryptocurrency1} alt="CrytoMonena" />
+                                <select name="select">
+                                    <option value="value1">Value 1</option>
+                                    <option value="value2" selected>Value 2</option>
+                                    <option value="value3">Value 3</option>
+                                </select>
+                                <span>
+                                    <p>-1.9737</p>
+                                    <p>1.2302223</p>
+                                </span>
+                            </span>
+                            <span className="btn-span">
+                                <button className="btn-withdrown">Swap Now</button>
+                                <button className="btn-transfer">Save transfer</button>
+                            </span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <Footer />
         </div>
