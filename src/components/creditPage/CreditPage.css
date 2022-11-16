@@ -7,7 +7,7 @@
 
 .title-starter {
     background: linear-gradient(90deg, #BE53FF, #B24FFB, #1B23C7);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
     font-size: 4rem;
