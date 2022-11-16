@@ -27,16 +27,8 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/WirelessPayment">Wireless Payment</Link>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="/#">Action</a></li>
-                                    <li><a className="dropdown-item" href="/#">Another action</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="/#">Something else here</a></li>
-                                </ul>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Exchange">Exchanged</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled" href="/#">Disabled</a>
