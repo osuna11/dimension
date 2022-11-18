@@ -16,6 +16,7 @@ import manosbitcoin from './assets/images/home-page-img/icons/manos-bitcoin.png'
 import credtsCards from './assets/images/index/credts cards.png'
 import logoParaLogin from './assets/images/log-ing-img/logo-para-login 1.svg'
 import fotoDePerfil from './assets/images/wireless-payment/foto-de-perfil.png'
+import eth from './assets/images/Exchange/eth.png'
 
 // eslint-disable-next-line
 export default {
@@ -36,5 +37,6 @@ export default {
     "manosbitcoin" : manosbitcoin,
     "credtsCards": credtsCards,
     "logoParaLogin" : logoParaLogin,
-    "fotoDePerfil": fotoDePerfil
+    "fotoDePerfil": fotoDePerfil,
+    "eth" : eth,
 }

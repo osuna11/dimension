@@ -14,15 +14,30 @@ const Bandera2 = "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera
 
 function Exchange() {
 
+    // eslint-disable-next-line
+    let [inputValue, setInputValue] = useState(1)
+    let [inputValueTo, setInputValueTo] = useState(1)
 
-    const [cash, setCash] = useState(0)
+    console.log(inputValue + " " + "inputValue")
+    console.log(inputValueTo + " " + "inputvalueTo")
+
     const afterClick = () => {
         var fromCurrency = document.querySelector(".from select")
         var toCurrency = document.querySelector(".to select")
+        var fromInput = document.querySelector(".from input");
+        var toInput = document.querySelector(".to input");
+        var imgFrom = document.querySelector(".from img");
+        var imgTo = document.querySelector(".to img")
 
-
+        console.log(imgTo.src)
         // const dropList = document.querySelectorAll(".drop-list select")
         // const exchageIcon = document.querySelector(".drop-list .icon");s
+
+        // console.log(fromCurrency.value + " " + "fromCurrency")
+        // console.log(toCurrency.value + " " + "toCurrency")
+
+        // console.log(fromInput.value + " " + "fromInput" )
+        // console.log(toInput.value + " " + "toInput")
 
         if (fromCurrency.value === toCurrency.value) {
             alert("no puedes cambiar entre la misma moneda")
@@ -31,16 +46,31 @@ function Exchange() {
         var tempCode = fromCurrency.value;
         fromCurrency.value = toCurrency.value;
         toCurrency.value = tempCode;
+
+        var tempInpur = fromInput.value;
+        fromInput.value = toInput.value;
+        toInput.value = tempInpur;
+
+        var tempImg = imgFrom.src;
+        imgFrom.src = imgTo.src;
+        imgTo.src = tempImg
     }
 
+
     useEffect(() => {
-        var frominputs = document.querySelector(".from input")
 
-        setCash (frominputs.value) 
-        console.log(frominputs.value)
         document.getElementById("prueba").addEventListener("click", afterClick)
-    })
 
+        // console.log(inputValue)
+        setInputValue(inputValue)
+        setInputValueTo(inputValue)
+
+        // setInputValueTo(inputValue)
+
+        return () => {
+            document.getElementById("prueba").removeEventListener("click", afterClick)
+        };
+    })
 
     return (
         <div className="bg-exchage">
@@ -75,13 +105,10 @@ function Exchange() {
 
                         <div className="wrapper">
 
-                            <header>Currency Converter</header>
                             <form action='/Exchange'>
                                 <div className="amount">
-                                    <p>Enter amount</p>
                                     <div className="from row">
-                                        <p>From</p>
-                                        <div className="select-box col-6">
+                                        <div className="select-box col-4">
                                             <img src={Bandera1} alt="flag" width="64" />
                                             <select defaultValue={'AFN'} >
                                                 <option value="AED">AED</option>
@@ -92,19 +119,18 @@ function Exchange() {
                                             </select>
 
                                         </div>
-                                        <div className="col-6">
-                                            <input type="text" defaultValue="1" />
-                                            <p>${ cash}</p>
+                                        <div className="col-4 display-exchange">
+                                            <p className="text-end">~${inputValue * 3}</p>
+                                            <input className="from-input text-end" onChange={(event => setInputValue(event.target.value))} type="text" value={inputValue} />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="row">
-                                    <div className="icon col-12" id="prueba"><i className="bi bi-arrow-left-right"></i></div>
-                                </div>
+
+                                <div className="icon " id="prueba"><i className="bi bi-arrow-left-right"></i></div>
+
                                 <div className="drop-list">
                                     <div className="to row">
-                                        <p>To</p>
-                                        <div className="select-box col-6">
+                                        <div className="select-box col-4">
                                             <img src={Bandera2} alt="flag" width="64" />
                                             <select defaultValue={'AED'} >
                                                 <option value="AED">AED</option>
@@ -114,9 +140,9 @@ function Exchange() {
                                                 <option value="AMD">AMD</option>
                                             </select>
                                         </div>
-                                        <div className="col-6">
-                                            <input type="text" defaultValue="1" />
-                                            <p>$</p>
+                                        <div className="col-4">
+                                            <p>~${inputValue}</p>
+                                            <input className="to-input text-end" id="prueba1" type="text" value={inputValue * 0.1} disabled />
                                         </div>
                                     </div>
                                 </div>
