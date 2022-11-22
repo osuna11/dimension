@@ -57,10 +57,10 @@ function Navbar() {
                         </ul> :
                             <div className="d-flex">
                                 <div>
-                                    <Link class="btn btn-primary m-1" to="/Singin" role="button">Sing In</Link>
+                                    <Link className="btn btn-primary m-1" to="/Singin" role="button">Sing In</Link>
                                 </div>
                                 <div>
-                                    <Link class="btn btn-primary m-1" to="/Login" role="button">Sing Up</Link>
+                                    <Link className="btn btn-primary m-1" to="/SingUp" role="button">Sing Up</Link>
                                 </div>
                             </div>
                         }
