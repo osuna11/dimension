@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import Homepage from './components/homepage/Homepage'
-import LogIn from './components/log-in/Login'
+import SingIn from './components/singIn/singIn'
 import Dashboard from "./components/Dashboard/Dashboard";
 import CreditPage from "./components/creditPage/CreditPage";
 import WirelessPayment from "./components/WirelessPayment/WirelessPayment";
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />}>
         </Route>
-        <Route path="/Login" element={<LogIn />}>
+        <Route path="/Singin" element={<SingIn />}>
         </Route>
         <Route path="/Dashboard" element={<Dashboard />}>
         </Route>

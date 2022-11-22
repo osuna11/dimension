@@ -4,22 +4,11 @@ import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar"
 import './Exchange.css'
 
-
-
-
-
-const Bandera1 = "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Albania.svg"
-const Bandera2 = "https://proyectoviajero.com/wp-content/uploads/2021/03/Bandera-de-Andorra.svg"
-
-
 function Exchange() {
 
-    // eslint-disable-next-line
     let [inputValue, setInputValue] = useState(1)
+    // eslint-disable-next-line 
     let [inputValueTo, setInputValueTo] = useState(1)
-
-    console.log(inputValue + " " + "inputValue")
-    console.log(inputValueTo + " " + "inputvalueTo")
 
     const afterClick = () => {
         var fromCurrency = document.querySelector(".from select")
@@ -29,7 +18,7 @@ function Exchange() {
         var imgFrom = document.querySelector(".from img");
         var imgTo = document.querySelector(".to img")
 
-        console.log(imgTo.src)
+        // console.log(imgTo.src)
         // const dropList = document.querySelectorAll(".drop-list select")
         // const exchageIcon = document.querySelector(".drop-list .icon");s
 
@@ -57,20 +46,23 @@ function Exchange() {
     }
 
 
+    // useEffect(() => {
+
+    //     document.getElementById("prueba").addEventListener("click", afterClick)
+
+    //     return () => {
+    //         document.getElementById("prueba").removeEventListener("click", afterClick)
+    //     };
+    // })
+
     useEffect(() => {
-
         document.getElementById("prueba").addEventListener("click", afterClick)
-
-        // console.log(inputValue)
-        setInputValue(inputValue)
-        setInputValueTo(inputValue)
-
-        // setInputValueTo(inputValue)
+        document.title = 'you clicked times'
 
         return () => {
-            document.getElementById("prueba").removeEventListener("click", afterClick)
+            document.getElementById("prueba")?.removeEventListener("click", afterClick)
         };
-    })
+    }, [])
 
     return (
         <div className="bg-exchage">
@@ -99,7 +91,7 @@ function Exchange() {
 
                         <div className="row header-section">
                             <div className="col-4"><button className="btn-color"><i className="bi bi-sliders"></i></button></div>
-                            <div className="col-4"><h1>Exchange 1</h1></div>
+                            <div className="col-4"><h1 className="title-trastations">Exchange</h1></div>
                             <div className="col-4"><button className="btn-color"><i className="bi bi-box-arrow-up"></i></button></div>
                         </div>
 
@@ -108,8 +100,8 @@ function Exchange() {
                             <form action='/Exchange'>
                                 <div className="amount">
                                     <div className="from row">
-                                        <div className="select-box col-4">
-                                            <img src={Bandera1} alt="flag" width="64" />
+                                        <div className="select-box col-4 m-auto ">
+                                            <img src={images.eth} alt="flag" width="64" />
                                             <select defaultValue={'AFN'} >
                                                 <option value="AED">AED</option>
                                                 <option value="AFN">AFN</option>
@@ -119,9 +111,9 @@ function Exchange() {
                                             </select>
 
                                         </div>
-                                        <div className="col-4 display-exchange">
+                                        <div className="col-4 display-exchange m-auto ">
                                             <p className="text-end">~${inputValue * 3}</p>
-                                            <input className="from-input text-end" onChange={(event => setInputValue(event.target.value))} type="text" value={inputValue} />
+                                            <input className="from-input text-end" onChange={(event => setInputValue(event.target.value))} value={inputValue} type="text" />
                                         </div>
                                     </div>
                                 </div>
@@ -130,8 +122,8 @@ function Exchange() {
 
                                 <div className="drop-list">
                                     <div className="to row">
-                                        <div className="select-box col-4">
-                                            <img src={Bandera2} alt="flag" width="64" />
+                                        <div className="select-box col-4 m-auto ">
+                                            <img src={images.bircoin2} alt="flag" width="64" />
                                             <select defaultValue={'AED'} >
                                                 <option value="AED">AED</option>
                                                 <option value="AFN">AFN</option>
@@ -140,14 +132,20 @@ function Exchange() {
                                                 <option value="AMD">AMD</option>
                                             </select>
                                         </div>
-                                        <div className="col-4">
-                                            <p>~${inputValue}</p>
-                                            <input className="to-input text-end" id="prueba1" type="text" value={inputValue * 0.1} disabled />
+                                        <div className="col-4 m-auto ">
+                                            <p className="text-end">~${inputValue}</p>
+                                            <input className="to-input text-end" id="prueba1" value={inputValue * 0.1} type="text" disabled />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="exchange-rate">1 USD = 118.16 NPR</div>
-                                <button>Get Exchange Rate</button>
+                                <div className="row btn-row"> 
+                                    <div className="col-12 col-md-4">
+                                        <button className="btn-swap">Swap Now</button>
+                                    </div>
+                                    <div className="col-12 col-md-4">
+                                        <button className="btn-save-transfer">Save transfer</button>
+                                    </div>
+                                </div>
                             </form>
                             {/* <span className="tab-exchange flex-container">
                                 <div>
@@ -187,11 +185,6 @@ function Exchange() {
                                     </span>
                                 </div>
                             </span> */}
-
-                            <span className="btn-span">
-                                <button className="">Swap Now</button>
-                                <button className="">Save transfer</button>
-                            </span>
                         </div>
                     </div>
                     {/* segunda parte de intercambio */}

@@ -11,12 +11,14 @@ import LogoInstagram from './assets/images/home-page-img/icons/instagram.png';
 import iphoneDemision from './assets/images/index/iphone-demision.png';
 import cryptocurrency1 from './assets/images/home-page-img/icons/cryptocurrency1.png';
 import carterabitcoin from './assets/images/home-page-img/icons/cartera-bitcoin.png';
-import bitcoin from './assets/images/home-page-img/icons/bitcoin.png'
-import manosbitcoin from './assets/images/home-page-img/icons/manos-bitcoin.png'
-import credtsCards from './assets/images/index/credts cards.png'
-import logoParaLogin from './assets/images/log-ing-img/logo-para-login 1.svg'
-import fotoDePerfil from './assets/images/wireless-payment/foto-de-perfil.png'
-import eth from './assets/images/Exchange/eth.png'
+import bitcoin from './assets/images/home-page-img/icons/bitcoin.png';
+import manosbitcoin from './assets/images/home-page-img/icons/manos-bitcoin.png';
+import credtsCards from './assets/images/index/credts cards.png';
+import logoParaLogin from './assets/images/log-ing-img/logo-para-login 1.svg';
+import fotoDePerfil from './assets/images/wireless-payment/foto-de-perfil.png';
+import eth from './assets/images/Exchange/eth.png';
+import bircoin2 from './assets/images/Exchange/bircoin2.png';
+import fotoDePerfilNav from './assets/images/home-page-img/img-user-perfil.png';
 
 // eslint-disable-next-line
 export default {
@@ -34,9 +36,11 @@ export default {
     "cryptocurrency1": cryptocurrency1,
     "carterabitcoin": carterabitcoin,
     "bitcoin": bitcoin,
-    "manosbitcoin" : manosbitcoin,
+    "manosbitcoin": manosbitcoin,
     "credtsCards": credtsCards,
-    "logoParaLogin" : logoParaLogin,
+    "logoParaLogin": logoParaLogin,
     "fotoDePerfil": fotoDePerfil,
-    "eth" : eth,
+    "eth": eth,
+    "bircoin2": bircoin2,
+    "fotoDePerfilNav": fotoDePerfilNav,
 }
