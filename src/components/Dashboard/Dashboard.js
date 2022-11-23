@@ -13,7 +13,7 @@ function Dashboard() {
                     <button className="btn btn-dark rounded-0 btn-sidebarMenu" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu"
                         aria-expanded="false" aria-controls="sidebarMenu">
                         Menu
-                        <i class="bi bi-caret-down-fill ms-1"></i>
+                        <i className="bi bi-caret-down-fill ms-1"></i>
                     </button>
 
                     <nav id="sidebarMenu" className="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -144,8 +144,8 @@ function Dashboard() {
                         </div>
 
                         <div className="col-6">
-                            <select className="form-select" aria-label="Default select example">
-                                <option selected value="0">Open this select menu</option>
+                            <select className="form-select" aria-label="Default select example" defaultValue={"0"}>
+                                <option value="0">Open this select menu</option>
                                 <option value="1"> One</option>
                                 <option value="2">Two</option>
                                 <option value="3">Three</option>
@@ -184,7 +184,7 @@ function Dashboard() {
                             <div className="tab-pane fade show active" id="nav-completed" role="tabpanel" aria-labelledby="nav-completed-tab">
                                 <div className="input-group mb-3 mt-3">
                                     <button className="btn btn-outline-secondary" type="button" id="button-addon1"><i className="bi bi-search"></i></button>
-                                    <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                                    <input type="text" className="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
                                 </div>
                                 <h2>Processing transactions 4 of 4</h2>
                                 <div className="table-responsive">
@@ -273,7 +273,7 @@ function Dashboard() {
                                     </table>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="nav-scheduled" role="tabpanel" aria-labelledby="nav-scheduled-tab">
+                            <div className="tab-pane fade" id="nav-scheduled" role="tabpanel" aria-labelledby="nav-scheduled-tab">
                                 <h2>Processing transactions 4 of 4</h2>
                                 <div className="table-responsive">
                                     <table className="table table-striped table-sm">
