@@ -4,22 +4,20 @@ import images from "../../images";
 import './singIn.css'
 // eslint-disable-next-line
 import toast, { Toaster } from 'react-hot-toast';
+import { Link } from "react-router-dom";
 
 const SingIn = () => {
 
+    useEffect(() => {
+        document.title = 'Sing In';
+    }, []);
 
     let [dataItem, setDataItem] = useState({
         email: "",
         password: "",
     });
-    
-
-    const person = { firstName: 'Robin', lastName: 'Wieruch' };
-
-    localStorage.setItem('user', JSON.stringify(person));
-
     const handleSubmitSingIp = (e) => {
-        fetch('http://localhost:4000/api/login', {
+        fetch('https://dimension12.herokuapp.com/api/login', {
             method: 'POST',
             body: JSON.stringify(dataItem),
             headers: {
@@ -28,12 +26,13 @@ const SingIn = () => {
             }
         }).then(res => {
             if (!res.ok) {
-                throw new Error(res.statusText);
+                throw new Error(res.status);
             }
             return res.json();
         })
             .then(data => {
-                console.log(data.token)
+                // console.log(data.user)
+                localStorage.setItem('identidad', JSON.stringify(data.user))
                 localStorage.setItem('token', data.token);
                 toast.success('Registered User!')
                 window.location = '/';
@@ -51,7 +50,6 @@ const SingIn = () => {
                 ...prevValue,
                 [name]: value
             }
-
         })
     }
 
@@ -61,7 +59,9 @@ const SingIn = () => {
                 <div className="row">
                     <div className="col-md-2"></div>
                     <div className="col-md-8">
-                        <img className="mb-4 img-logo" src={images.logoParaLogin} alt="logo" />
+                        <Link to="/">
+                            <img className="mb-4 img-logo" src={images.logoParaLogin} alt="logo" />
+                        </Link>
                     </div>
                     <div className="col-md-2"></div>
                 </div>
@@ -85,8 +85,12 @@ const SingIn = () => {
                     Verify your identity</p>
                 <p className="mt-5 mb-3 text-muted text-center">&copy; 2022 Dimension. All rights Reserved</p>
             </form>
-            <Toaster position="top-right" />
+            <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
         </div>
+
     );
 }
 

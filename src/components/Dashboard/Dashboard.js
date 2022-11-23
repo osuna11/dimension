@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import './Dashboard.css'
 
 function Dashboard() {
+
+    useEffect(() => {
+        document.title = 'Dashboard';
+    }, []);
+
     return (
         <div>
             <Navbar />
@@ -184,7 +189,7 @@ function Dashboard() {
                             <div className="tab-pane fade show active" id="nav-completed" role="tabpanel" aria-labelledby="nav-completed-tab">
                                 <div className="input-group mb-3 mt-3">
                                     <button className="btn btn-outline-secondary" type="button" id="button-addon1"><i className="bi bi-search"></i></button>
-                                    <input type="text" className="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                                    <input type="text" className="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" />
                                 </div>
                                 <h2>Processing transactions 4 of 4</h2>
                                 <div className="table-responsive">

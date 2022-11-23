@@ -8,7 +8,8 @@ import WirelessPayment from "./components/WirelessPayment/WirelessPayment";
 import Exchange from "./components/Exchange/Exchange";
 import SingUp from "./components/singUp/SingUp";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-
+// eslint-disable-next-line
+import toast, { Toaster } from 'react-hot-toast';
 
 
 

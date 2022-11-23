@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import images from "../../images";
 import './singUp.css'
 import toast, { Toaster } from 'react-hot-toast';
+import { Link } from "react-router-dom";
 
 const SingUp = () => {
 
@@ -14,10 +15,11 @@ const SingUp = () => {
     });
 
     useEffect(() => {
+        document.title = 'Sing Up';
     }, []);
     // eslint-disable-next-line 
     const handleSubmitSingUp = (e) => {
-        fetch('http://localhost:4000/api/signUp', {
+        fetch('https://dimension12.herokuapp.com/api/signUp', {
             method: 'POST',
             body: JSON.stringify(formdata),
             headers: {
@@ -61,44 +63,13 @@ const SingUp = () => {
 
     return (
         <div className="bodySingup">
-            {/* <form className="form-signin" onSubmit={handleSubmitSingUp}>
-                <div className="row">
-                    <div className="col-md-2"></div>
-                    <div className="col-md-8">
-                        <img className="mb-4 img-logo" src={images.logoParaLogin} alt="logo" />
-                    </div>
-                    <div className="col-md-2"></div>
-                </div>
-                <div className="form-group">
-                    <input type="email" className="form-control inputs-change-log rounded-pill" id="inputEmail"
-                        placeholder="Email address" name="email" onChange={handleChang} required autoFocus />
-                    <label htmlFor="inputEmail" className="visually-hidden">Email</label>
-                </div>
-                <div className="form-group">
-                    <input type="text" className="form-control inputs-change-log rounded-pill" id="inputName"
-                        placeholder="Name" name="name" onChange={handleChang} required autoFocus />
-                    <label htmlFor="inputName" className="visually-hidden">name</label>
-                </div>
-                <div className="form-group">
-                    <input type="password" id="inputPassword" className="form-control inputs-change-log rounded-pill" placeholder="Password"
-                        required name="password" onChange={handleChang} />
-                    <label htmlFor="inputPassword" className="visually-hidden">Password</label>
-                </div>
-                <button className="btn btn-lg btn-primary btn-block button-lon-in mb-3 w-100 rounded-pill" type="submit">Log In</button>
-                <div className="form-group form-link-footer">
-                    <a className="form-link-footer link-hover text-center" href="/#">Forgot your email address?</a>
-                    <br />
-                    <a className="form-link-footer link-hover text-center" href="/#">Forgot your password?</a>
-                </div>
-                <p className="mt-5 mb-3 text-muted text-center">By clicking "Log in" , You agree tp recieve SMS text <br /> messages from Chime to
-                    Verify your identity</p>
-                <p className="mt-5 mb-3 text-muted text-center">&copy; 2022 Dimension. All rights Reserved</p>
-            </form> */}
             <form className="form-signUp" onSubmit={handleSubmitSingUp}>
                 <div className="row">
                     <div className="col-md-2"></div>
                     <div className="col-md-8">
-                        <img className="mb-4 img-logo" src={images.logoParaLogin} alt="logo" />
+                        <Link to="/">
+                            <img className="mb-4 img-logo" src={images.logoParaLogin} alt="logo" />
+                        </Link>
                     </div>
                     <div className="col-md-2"></div>
                 </div>

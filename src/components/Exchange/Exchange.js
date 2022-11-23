@@ -7,9 +7,6 @@ import './Exchange.css'
 function Exchange() {
 
     let [inputValue, setInputValue] = useState(1)
-    // eslint-disable-next-line 
-    let [inputValueTo, setInputValueTo] = useState(1)
-
     const afterClick = () => {
         var fromCurrency = document.querySelector(".from select")
         var toCurrency = document.querySelector(".to select")
@@ -17,16 +14,6 @@ function Exchange() {
         var toInput = document.querySelector(".to input");
         var imgFrom = document.querySelector(".from img");
         var imgTo = document.querySelector(".to img")
-
-        // console.log(imgTo.src)
-        // const dropList = document.querySelectorAll(".drop-list select")
-        // const exchageIcon = document.querySelector(".drop-list .icon");s
-
-        // console.log(fromCurrency.value + " " + "fromCurrency")
-        // console.log(toCurrency.value + " " + "toCurrency")
-
-        // console.log(fromInput.value + " " + "fromInput" )
-        // console.log(toInput.value + " " + "toInput")
 
         if (fromCurrency.value === toCurrency.value) {
             alert("no puedes cambiar entre la misma moneda")
@@ -45,20 +32,10 @@ function Exchange() {
         imgTo.src = tempImg
     }
 
-
-    // useEffect(() => {
-
-    //     document.getElementById("prueba").addEventListener("click", afterClick)
-
-    //     return () => {
-    //         document.getElementById("prueba").removeEventListener("click", afterClick)
-    //     };
-    // })
-
     useEffect(() => {
-        document.getElementById("prueba").addEventListener("click", afterClick)
-        document.title = 'you clicked times'
+        document.title = 'Exchange';
 
+        document.getElementById("prueba").addEventListener("click", afterClick)
         return () => {
             document.getElementById("prueba")?.removeEventListener("click", afterClick)
         };
@@ -67,10 +44,8 @@ function Exchange() {
     return (
         <div className="bg-exchage">
             <Navbar />
-
             {/* pestañas */}
             <div className="nav-tabs-div">
-
                 {/* Barra de nvegacion */}
                 <ul className="nav nav-tabs nav-tabs-ul" id="myTab" role="tablist">
                     <li className="nav-item" role="presentation">
@@ -83,20 +58,15 @@ function Exchange() {
                         <button className="nav-link button" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
                     </li>
                 </ul>
-
                 <div className="tab-content" id="myTabContent">
-
                     {/* primer parte de intercambio */}
                     <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
                         <div className="row header-section">
                             <div className="col-4"><button className="btn-color"><i className="bi bi-sliders"></i></button></div>
                             <div className="col-4"><h1 className="title-trastations">Exchange</h1></div>
                             <div className="col-4"><button className="btn-color"><i className="bi bi-box-arrow-up"></i></button></div>
                         </div>
-
                         <div className="wrapper">
-
                             <form action='/Exchange'>
                                 <div className="amount">
                                     <div className="from row">
@@ -109,7 +79,6 @@ function Exchange() {
                                                 <option value="ALL">ALL</option>
                                                 <option value="AMD">AMD</option>
                                             </select>
-
                                         </div>
                                         <div className="col-4 display-exchange m-auto ">
                                             <p className="text-end">~${inputValue * 3}</p>
@@ -117,9 +86,7 @@ function Exchange() {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className="icon " id="prueba"><i className="bi bi-arrow-left-right"></i></div>
-
                                 <div className="drop-list">
                                     <div className="to row">
                                         <div className="select-box col-4 m-auto ">
@@ -138,7 +105,7 @@ function Exchange() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="row btn-row"> 
+                                <div className="row btn-row">
                                     <div className="col-12 col-md-4">
                                         <button className="btn-swap">Swap Now</button>
                                     </div>
@@ -147,44 +114,6 @@ function Exchange() {
                                     </div>
                                 </div>
                             </form>
-                            {/* <span className="tab-exchange flex-container">
-                                <div>
-                                    <img src={images.cryptocurrency1} alt="CrytoMonena" />
-                                </div>
-                                <div>
-                                    <select name="select">
-                                        <option value="value1">value 1</option>
-                                        <option value="value2">value 2</option>
-                                        <option value="value3">value 3</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <span>
-                                        <p>-1.9737</p>
-                                        <p>1.2302223</p>
-                                    </span>
-                                </div>
-                            </span>
-
-                            <button className="exchange-btn"><i className="bi bi-arrow-down-up"></i></button>
-                            <span className="tab-exchange flex-container">
-                                <div>
-                                    <img src={images.cryptocurrency1} alt="CrytoMonena" />
-                                </div>
-                                <div>
-                                    <select name="select">
-                                        <option value="value1">value 1</option>
-                                        <option value="value2">value 2</option>
-                                        <option value="value3">value 3</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <span>
-                                        <p>-1.9737</p>
-                                        <p>1.2302223</p>
-                                    </span>
-                                </div>
-                            </span> */}
                         </div>
                     </div>
                     {/* segunda parte de intercambio */}
@@ -197,11 +126,6 @@ function Exchange() {
                         <div>
                             <span className="tab-exchange">
                                 <img src={images.cryptocurrency1} alt="CrytoMonena" />
-                                {/* <select defaultValue={'value1'}>
-                                    <option value="value1">value 1</option>
-                                    <option value="value2">value 2</option>
-                                    <option value="value3">value 3</option>
-                                </select> */}
                                 <span>
                                     <p>-1.9737</p>
                                     <p>1.2302223</p>
@@ -210,11 +134,6 @@ function Exchange() {
                             <button className="exchange-btn"><i className="bi bi-arrow-down-up"></i></button>
                             <span className="tab-exchange">
                                 <img src={images.cryptocurrency1} alt="CrytoMonena" />
-                                {/* <select defaultValue={'value1'}>
-                                    <option value="value1">value 1</option>
-                                    <option value="value2">value 2</option>
-                                    <option value="value3">value 3</option>
-                                </select> */}
                                 <span>
                                     <p>-1.9737</p>
                                     <p>1.2302223</p>
@@ -236,11 +155,6 @@ function Exchange() {
                         <div>
                             <span className="tab-exchange">
                                 <img src={images.cryptocurrency1} alt="CrytoMonena" />
-                                {/* <select defaultValue={'value1'}>
-                                    <option value="value1">value 1</option>
-                                    <option value="value2">value 2</option>
-                                    <option value="value3">value 3</option>
-                                </select> */}
                                 <span>
                                     <p>-1.9737</p>
                                     <p>1.2302223</p>
@@ -249,11 +163,6 @@ function Exchange() {
                             <button className="exchange-btn"><i className="bi bi-arrow-down-up"></i></button>
                             <span className="tab-exchange">
                                 <img src={images.cryptocurrency1} alt="CrytoMonena" />
-                                {/* <select defaultValue={'value1'}>
-                                    <option value="value1">value 1</option>
-                                    <option value="value2">value 2</option>
-                                    <option value="value3">value 3</option>
-                                </select> */}
                                 <span>
                                     <p>-1.9737</p>
                                     <p>1.2302223</p>

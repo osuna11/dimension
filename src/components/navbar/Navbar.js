@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
+    const getIdentidad = localStorage.getItem('identidad')
+    const userToken = JSON.parse(getIdentidad);
+    // console.log(userToken.name)
     const tokenString = localStorage.getItem('token');
-    console.log(tokenString)
+    // console.log(tokenString)
 
     const singOut = () => {
-        console.log("aqui es sign out")
         localStorage.clear();
         window.location = '/';
     }
@@ -37,29 +39,17 @@ function Navbar() {
                                 <Link className="nav-link" to="/Exchange">Exchanged</Link>
                             </li>
                         </ul>
-
-                        {tokenString ? <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-
-                            <li className="nav-item">
-                                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                                    <li className="nav-item dropdown">
-                                        <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src={images.fotoDePerfilNav} alt="" />
-                                            Alan Najera
-                                        </a>
-                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a className="dropdown-item" href="/#">Action</a></li>
-                                            <li><a className="dropdown-item" href="/#">Another action</a></li>
-                                            <li>
-                                                <hr className="dropdown-divider" />
-                                            </li>
-                                            <li><Link className="dropdown-item" onClick={singOut}>sign Out</Link></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul> :
+                        {tokenString ? <div className="dropdown">
+                            <button className="btn btn-secondary dropdown-toggle me-5" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                {userToken.name} {userToken.lastName}
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><Link className="dropdown-item" href="#">Action</Link></li>
+                                <li><Link className="dropdown-item" href="#">Another action</Link></li>
+                                <li><Link className="dropdown-item" onClick={singOut}>Sing Out</Link></li>
+                            </ul>
+                        </div>
+                            :
                             <div className="d-flex">
                                 <div>
                                     <Link className="btn btn-primary m-1" to="/Singin" role="button">Sing In</Link>
@@ -71,9 +61,9 @@ function Navbar() {
                         }
                     </div>
                 </div>
-            </nav>
+            </nav >
 
-        </div>
+        </div >
     );
 }
 
