@@ -5,8 +5,14 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 
+    const tokenString = localStorage.getItem('token');
+    console.log(tokenString)
 
-    var isLoggendin = false;
+    const singOut = () => {
+        console.log("aqui es sign out")
+        localStorage.clear();
+        window.location = '/';
+    }
 
     return (
         <div>
@@ -30,10 +36,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/Exchange">Exchanged</Link>
                             </li>
-
                         </ul>
 
-                        {isLoggendin ? <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        {tokenString ? <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
                             <li className="nav-item">
                                 <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -49,7 +54,7 @@ function Navbar() {
                                             <li>
                                                 <hr className="dropdown-divider" />
                                             </li>
-                                            <li><Link className="dropdown-item" href="/#">Something else here</Link></li>
+                                            <li><Link className="dropdown-item" onClick={singOut}>sign Out</Link></li>
                                         </ul>
                                     </li>
                                 </ul>

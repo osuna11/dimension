@@ -8,7 +8,11 @@ import toast, { Toaster } from 'react-hot-toast';
 const SingIn = () => {
 
 
-    let [dataItem, setDataItem] = useState([]);
+    let [dataItem, setDataItem] = useState({
+        email: "",
+        password: "",
+    });
+    
 
     const person = { firstName: 'Robin', lastName: 'Wieruch' };
 
@@ -24,18 +28,13 @@ const SingIn = () => {
             }
         }).then(res => {
             if (!res.ok) {
-                console.log(res.status)
-                if (res.status === 500) {
-                    throw new Error("Email already registered");
-                }
-                if (res.status === 400) {
-                    throw new Error("Required data");
-                }
+                throw new Error(res.statusText);
             }
             return res.json();
         })
             .then(data => {
-                console.log(data)
+                console.log(data.token)
+                localStorage.setItem('token', data.token);
                 toast.success('Registered User!')
                 window.location = '/';
             })
@@ -45,9 +44,20 @@ const SingIn = () => {
         e.preventDefault()
     }
 
+    const handleChang = (e) => {
+        const { name, value } = e.target;
+        setDataItem(prevValue => {
+            return {
+                ...prevValue,
+                [name]: value
+            }
+
+        })
+    }
+
     return (
         <div className="body">
-            <form className="form-signin">
+            <form className="form-signin" onSubmit={handleSubmitSingIp}>
                 <div className="row">
                     <div className="col-md-2"></div>
                     <div className="col-md-8">
@@ -57,12 +67,12 @@ const SingIn = () => {
                 </div>
                 <div className="form-group">
                     <input type="email" className="form-control inputs-change-log rounded-pill" id="inputEmail"
-                        placeholder="Email address" name="email" required autoFocus />
+                        placeholder="Email address" name="email" required autoFocus onChange={handleChang} />
                     <label htmlFor="inputEmail" className="visually-hidden">Email</label>
                 </div>
                 <div className="form-group">
                     <input type="password" id="inputPassword" className="form-control inputs-change-log rounded-pill" placeholder="Password"
-                        required name="password" />
+                        required name="password" onChange={handleChang} />
                     <label htmlFor="inputPassword" className="visually-hidden">Password</label>
                 </div>
                 <button className="btn btn-lg btn-primary btn-block button-lon-in mb-3 w-100 rounded-pill" type="submit">Log In</button>
