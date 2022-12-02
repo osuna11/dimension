@@ -7,11 +7,10 @@ import CreditPage from "./components/creditPage/CreditPage";
 import WirelessPayment from "./components/WirelessPayment/WirelessPayment";
 import Exchange from "./components/Exchange/Exchange";
 import SingUp from "./components/singUp/SingUp";
+import EditPerfile from "./components/editPerfile/EditPerfile";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // eslint-disable-next-line
 import toast, { Toaster } from 'react-hot-toast';
-
-
 
 
 function App() {
@@ -31,6 +30,8 @@ function App() {
         <Route path="/Exchange" element={<Exchange />}>
         </Route>
         <Route path="/SingUp" element={<SingUp />}>
+        </Route>
+        <Route path="/EditPerfile" element={<EditPerfile />}>
         </Route>
       </Routes>
     </Router>

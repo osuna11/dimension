@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import images from '../../images';
 import Footer from '../footer/Footer';
 import Navbar from '../navbar/Navbar';
@@ -7,6 +7,11 @@ import './WirelessPaymente.css'
 
 
 function WirelessPayment() {
+
+    useEffect(() => {
+        document.title = 'WIRELESS PAYMENT';
+    }, []);
+
     return (
         <div>
             <Navbar />

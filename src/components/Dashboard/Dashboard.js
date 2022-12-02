@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 import './Dashboard.css'
@@ -6,7 +6,7 @@ import './Dashboard.css'
 function Dashboard() {
 
     useEffect(() => {
-        document.title = 'Dashboard';
+        document.title = 'DASHBOARD';
     }, []);
 
     return (

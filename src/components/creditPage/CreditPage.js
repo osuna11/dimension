@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import images from "../../images";
@@ -6,6 +6,11 @@ import './CreditPage.css'
 
 
 function CreditPage() {
+
+    useEffect(() => {
+        document.title = 'CREDIT PAGE';
+    }, []);
+
     return (
         <div>
             <Navbar />
